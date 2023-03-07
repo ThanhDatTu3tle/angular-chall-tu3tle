@@ -1,0 +1,29 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    font-weight: 500;
+    min-width: 100%;
+    min-height: 44px;
+    padding: 10px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: rgb(221, 0, 49);
+    color: white;
+    line-height: 22px;
+    user-select: none;
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+          #ff5b6a;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
