@@ -18,6 +18,6 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
     AppRoutingModule // CLI adds AppRoutingModule to the AppModule's imports array
   ],
   providers: [],
-  bootstrap: [ProfileCardComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
