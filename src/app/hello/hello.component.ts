@@ -6,9 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hello.component.scss']
 })
 export class HelloComponent {
-  
-  @Input()
-  name!: string;
+
+  @Input() name!: string;
 
   ngOnInit() {
     console.log('Init!')

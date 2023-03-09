@@ -6,18 +6,20 @@ import { AppComponent } from './app.component';
 
 import { HelloComponent } from './hello/hello.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule // CLI adds AppRoutingModule to the AppModule's imports array
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AuthorsComponent]
 })
 export class AppModule { }

@@ -31,13 +31,13 @@
 </div>
 
 <div class="content" role="main">
-  <app-hello *ngIf="user.age >= 18" [name]="user.name"></app-hello>
+  <app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
 
-  <!-- <ng-component #under18> -->
-    <div *ngIf="user.age < 18">
+  <ng-template #under18>
+    <div>
       You are too young to see this content!!!
     </div>
-  <!-- </ng-component> -->
+  </ng-template>
 
   <button (click)="user.age = user.age - 1">-</button>
   <p>Age: {{ user.age }}</p>
