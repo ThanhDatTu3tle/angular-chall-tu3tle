@@ -22,10 +22,17 @@
     <!--Sử dụng nhiều structure directive-->
 
     <h2>List of female authors:</h2>
-    <app-author-info *ngFor="let author of authors" [author]="author" (select)="onSelected($event)"></app-author-info>
+    <app-author-info 
+        *ngFor="let author of authors" 
+        [author]="author" 
+        (select)="onSelected($event)"
+        (delete)="onDeleted($event)"
+    ></app-author-info>
 
     <h3>Id of selected author: {{ selectedAuthor.id }}</h3>
     <h3>Full name of selected author: {{ selectedAuthor.firstName }} {{ selectedAuthor.lastName }}</h3>
+
+    <div *ngIf=""></div>
     <!-- <ul>
         <li *ngFor="let author of authors; first as isFirst; last as isLast; even as isEven; odd as isOdd">
             <p>ID:{{author.id}} | {{author.firstName}} {{author.lastName}}</p>
@@ -54,4 +61,8 @@
 
 <ng-template #isMale>
     <p>Author này không có gender là Female</p>
+</ng-template>
+
+<ng-template #isExistAuthor>
+    <p>Bạn xóa hết authors luôn rồi còn đâu!</p>
 </ng-template>

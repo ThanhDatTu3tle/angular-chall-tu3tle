@@ -14,4 +14,15 @@ export class AuthorsComponent {
   onSelected = (selectedAuthor: Author) => {
     this.selectedAuthor = selectedAuthor;
   }
+
+  onDeleted = (id: number) => {
+    this.authors = this.authors.filter(author => {
+      return author.id !== id;
+    })
+
+    if (this.selectedAuthor.id === id) {
+      this.selectedAuthor = this.authors[0];
+      console.log(this.selectedAuthor);
+    }
+  }
 }

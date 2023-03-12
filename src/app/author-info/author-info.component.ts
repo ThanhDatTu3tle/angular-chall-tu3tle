@@ -9,14 +9,14 @@ import { Author } from '../data/authors';
 export class AuthorInfoComponent {
   @Input() author: Author | any;
   @Output() select = new EventEmitter<Author>();
+  @Output() delete = new EventEmitter<number>();
 
   handleShowInfoOfAuthor = () => {
     this.select.emit(this.author);
-    console.log(`${this.select.emit(this.author.id)}`)
   }
 
   handleDeleteAuthor = () => {
-    // this.select.emit(null);
+    this.delete.emit(this.author.id);
   }
 
   constructor() {}
