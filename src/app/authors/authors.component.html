@@ -21,9 +21,12 @@
 
     <!--Sử dụng nhiều structure directive-->
 
-    <p>List of female authors:</p>
+    <h2>List of female authors:</h2>
+    <app-author-info *ngFor="let author of authors" [author]="author" (select)="onSelected($event)"></app-author-info>
 
-    <ul>
+    <h3>Id of selected author: {{ selectedAuthor.id }}</h3>
+    <h3>Full name of selected author: {{ selectedAuthor.firstName }} {{ selectedAuthor.lastName }}</h3>
+    <!-- <ul>
         <li *ngFor="let author of authors; first as isFirst; last as isLast; even as isEven; odd as isOdd">
             <p>ID:{{author.id}} | {{author.firstName}} {{author.lastName}}</p>
             <p *ngIf="author.gender == 'Male'; else isMale">
@@ -46,7 +49,7 @@
                 ----------------
             </p>
         </li>
-    </ul>
+    </ul> -->
 </div>
 
 <ng-template #isMale>

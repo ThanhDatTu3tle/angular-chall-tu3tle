@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { AuthorInfoComponent } from './author-info/author-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     ProfileCardComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    AuthorInfoComponent
   ],
   imports: [
     BrowserModule,
