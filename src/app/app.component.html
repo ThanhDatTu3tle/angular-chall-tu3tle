@@ -31,7 +31,8 @@
 </div>
 
 <div class="content" role="main">
-  <app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
+  <!-- App Hello -->
+  <!-- <app-hello *ngIf="user.age >= 18; else under18" [name]="user.name"></app-hello>
 
   <ng-template #under18>
     <div>
@@ -41,7 +42,7 @@
 
   <button (click)="user.age = user.age - 1">-</button>
   <p>Age: {{ user.age }}</p>
-  <button (click)="user.age = user.age + 1">+</button>
+  <button (click)="user.age = user.age + 1">+</button> -->
 
   <!-- Profile Card -->
   <!-- <app-profile-card></app-profile-card> -->

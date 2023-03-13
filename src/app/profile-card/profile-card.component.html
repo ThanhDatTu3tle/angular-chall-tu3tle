@@ -1,15 +1,18 @@
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="card">
-  <img [src]="data.image" alt="Tu3tle" style="width:100%">
-  <h1>{{ data.name }}</h1>
-  <p class="title">{{ data.title }}</p>
-  <p>{{ data.university }}</p>
-  <a href="#"><i class="fa fa-dribbble"></i></a>
-  <a href="#"><i class="fa fa-instagram"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <a [href]="data.mediaLinks.facebook"><i class="fa fa-facebook"></i></a>
-  <p><button (click)="handleClick()">Contact me</button></p>
+<div class="wrapper">
+  <div class="card">
+    <img [src]="data.image" alt="Tu3tle" style="width:100%">
+    <h1>{{ data.name }}</h1>
+    <p class="title">{{ data.title }}</p>
+    <p>{{ data.university }}</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a [href]="data.mediaLinks.facebook"><i class="fa fa-facebook"></i></a>
+    <p><button (click)="handleClick()">Contact me</button></p>
+  </div>
+  
+  <app-toggle [checked]="checked" (checkedChanged)="checked=$event"></app-toggle>
 </div>
-

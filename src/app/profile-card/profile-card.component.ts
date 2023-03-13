@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent {
-
   data = {
     name: 'Dat Nguyen',
     title: 'Internship at TMA Solutions',
@@ -21,8 +20,10 @@ export class ProfileCardComponent {
     }
   }
 
-  handleClick = () => {
+  handleClick() {
     alert('Thank you for contact me!!!')
   }
+
+  checked = false;
 }
 

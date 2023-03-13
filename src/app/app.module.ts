@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AuthorInfoComponent } from './author-info/author-info.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { ChildComponent } from './child/child.component';
     AuthorsComponent,
     AuthorInfoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // CLI adds AppRoutingModule to the AppModule's imports array
+    AppRoutingModule, // CLI adds AppRoutingModule to the AppModule's imports array
+    FormsModule
   ],
   providers: [],
-  bootstrap: [ParentComponent]
+  bootstrap: [ProfileCardComponent]
 })
 export class AppModule { }
