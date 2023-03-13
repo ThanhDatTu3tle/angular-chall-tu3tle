@@ -8,6 +8,8 @@ import { HelloComponent } from './hello/hello.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorInfoComponent } from './author-info/author-info.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { AuthorInfoComponent } from './author-info/author-info.component';
     HelloComponent,
     ProfileCardComponent,
     AuthorsComponent,
-    AuthorInfoComponent
+    AuthorInfoComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule // CLI adds AppRoutingModule to the AppModule's imports array
   ],
   providers: [],
-  bootstrap: [AuthorsComponent]
+  bootstrap: [ParentComponent]
 })
 export class AppModule { }

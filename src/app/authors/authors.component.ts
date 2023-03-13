@@ -11,18 +11,25 @@ export class AuthorsComponent {
   authors = authors;
   selectedAuthor = authors[0];
 
-  onSelected = (selectedAuthor: Author) => {
+  onSelected(selectedAuthor: Author) {
     this.selectedAuthor = selectedAuthor;
   }
 
-  onDeleted = (id: number) => {
+  onDeleted(id: number, count: number) {
     this.authors = this.authors.filter(author => {
       return author.id !== id;
     })
 
     if (this.selectedAuthor.id === id) {
       this.selectedAuthor = this.authors[0];
-      console.log(this.selectedAuthor);
+      count++
     }
+  } 
+
+  onCount(id: any) {
+
   }
+
+  constructor() {}
+  ngOnInit() {}
 }

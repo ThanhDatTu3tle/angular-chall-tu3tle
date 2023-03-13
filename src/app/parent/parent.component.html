@@ -1,0 +1,9 @@
+<div>
+    <h1>Parent component</h1>
+    <h2>Truyền data sang "child component"</h2>
+    <app-child
+        *ngFor="let user of data"
+        [user]="user"
+    >
+    </app-child>
+</div>

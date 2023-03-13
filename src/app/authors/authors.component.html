@@ -1,67 +1,18 @@
 <div class="wrapper">
-    <!-- <p>List of authors:</p> -->
-
-    <!--Vanilla-->
-    <!-- <div *ngFor="let author of authors">
-        {{author.id}} - {{author.firstName}} {{author.lastName}}
-    </div> -->
-
-    <!--ng-template-->
-    <!-- <ng-template
-        ngFor
-        [ngForOf]="authors"
-        let-author
-        let-index="index"
-        let-total="count"
-    >
-        <div>
-            {{index}}|{{total}}: {{author.firstName}} {{author.lastName}}
-        </div>
-    </ng-template> -->
-
-    <!--Sử dụng nhiều structure directive-->
-
     <h2>List of female authors:</h2>
     <app-author-info 
-        *ngFor="let author of authors" 
+        *ngFor="let author of authors; count as number" 
         [author]="author" 
         (select)="onSelected($event)"
-        (delete)="onDeleted($event)"
-    ></app-author-info>
+        (delete)="onDeleted($event, $event)"
+        (count)="onCount($event)"
+    >
+        <ng-container *ngIf="number !== 0"; else isExistAuthor></ng-container>
+    </app-author-info>
 
     <h3>Id of selected author: {{ selectedAuthor.id }}</h3>
     <h3>Full name of selected author: {{ selectedAuthor.firstName }} {{ selectedAuthor.lastName }}</h3>
-
-    <div *ngIf=""></div>
-    <!-- <ul>
-        <li *ngFor="let author of authors; first as isFirst; last as isLast; even as isEven; odd as isOdd">
-            <p>ID:{{author.id}} | {{author.firstName}} {{author.lastName}}</p>
-            <p *ngIf="author.gender == 'Male'; else isMale">
-                Author này có gender là {{author.gender}}
-            </p>
-            <p *ngIf="isOdd">
-                Vị trí lẻ
-            </p>
-            <p *ngIf="isEven">
-                Vị trí chẵn
-            </p>
-            <p *ngIf="isFirst">
-                ---------------
-                Author đầu tiên
-                ---------------
-            </p>
-            <p *ngIf="isLast">
-                ----------------
-                Author cuối cùng
-                ----------------
-            </p>
-        </li>
-    </ul> -->
 </div>
-
-<ng-template #isMale>
-    <p>Author này không có gender là Female</p>
-</ng-template>
 
 <ng-template #isExistAuthor>
     <p>Bạn xóa hết authors luôn rồi còn đâu!</p>
