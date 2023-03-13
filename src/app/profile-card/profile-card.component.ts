@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { ToggleComponent } from '../toggle/toggle.component';
 
 @Component({
   selector: 'app-profile-card',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent {
+  @ViewChild('toggleComp', { static: true }) toggleComponent: ToggleComponent | any;
+  @ViewChildren(ToggleComponent) toggleComponents: QueryList<ToggleComponent> | any;
+
   data = {
     name: 'Dat Nguyen',
     title: 'Internship at TMA Solutions',
@@ -25,5 +29,17 @@ export class ProfileCardComponent {
   }
 
   checked = false;
+
+  ngOnInit() {
+    console.log(`ngOnInit: `, this.toggleComponent)
+    this.toggleComponents.changes.subscribe(console.log)
+  }
+
+  ngAfterViewInit() {
+    console.log(`ngAfterViewInit: `, this.toggleComponent)
+    this.toggleComponents.changes.subscribe(console.log)
+  }
 }
+
+
 

@@ -3,7 +3,7 @@
 
 <div class="wrapper">
   <div class="card">
-    <img [src]="data.image" alt="Tu3tle" style="width:100%">
+    <img [src]="data.image" alt="Tu3tle">
     <h1>{{ data.name }}</h1>
     <p class="title">{{ data.title }}</p>
     <p>{{ data.university }}</p>
@@ -14,5 +14,10 @@
     <p><button (click)="handleClick()">Contact me</button></p>
   </div>
   
-  <app-toggle [checked]="checked" (checkedChanged)="checked=$event"></app-toggle>
+  <app-toggle #toggleComp [checked]="checked" (checkedChanged)="checked=$event"></app-toggle>
+  <!-- <app-toggle #toggleComp [(checked)]="checked"></app-toggle> -->
+
+  <!-- <button #toggleButton (click)="toggleComp.handleToggle()">Toggle!</button> -->
 </div>
+
+

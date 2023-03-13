@@ -1,8 +1,6 @@
 button {
   border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px;
+  padding: 20px;
   color: white;
   background-color: #000;
   text-align: center;
@@ -23,9 +21,10 @@ button:hover, a:hover {
 }
 
 img {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
+  margin-top: 20px;
 }
 
 .wrapper {
