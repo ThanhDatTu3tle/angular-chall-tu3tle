@@ -1,3 +1,5 @@
+@import "../app.component.scss";
+
 button {
     margin-left: 10px;
     border-radius: 5px;
@@ -6,5 +8,9 @@ button {
 .wrapper {
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    padding: auto;
+    width: 100%;
+    height: 100%;
 }

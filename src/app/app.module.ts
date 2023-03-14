@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -12,6 +16,9 @@ import { AuthorInfoComponent } from './author-info/author-info.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ToggleComponent } from './toggle/toggle.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AuthorsTableComponent } from './authors-table/authors-table.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +29,20 @@ import { ToggleComponent } from './toggle/toggle.component';
     AuthorInfoComponent,
     ParentComponent,
     ChildComponent,
-    ToggleComponent
+    ToggleComponent,
+    HeaderComponent,
+    FooterComponent,
+    AuthorsTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // CLI adds AppRoutingModule to the AppModule's imports array
-    FormsModule
+    FormsModule, 
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatTableModule
   ],
   providers: [],
-  bootstrap: [ProfileCardComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

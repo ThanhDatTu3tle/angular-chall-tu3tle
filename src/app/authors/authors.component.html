@@ -1,19 +1,13 @@
 <div class="wrapper">
-    <h2>List of female authors:</h2>
+    <h3>Id of selected author: {{ selectedAuthor.id }}</h3>
+    <h3>Full name of selected author: {{ selectedAuthor.firstName }} {{ selectedAuthor.lastName }}</h3>
+    
     <app-author-info 
-        *ngFor="let author of authors; count as number" 
+        *ngFor="let author of authors"
         [author]="author" 
         (select)="onSelected($event)"
         (delete)="onDeleted($event, $event)"
-        (count)="onCount($event)"
     >
-        <ng-container *ngIf="number !== 0"; else isExistAuthor></ng-container>
+
     </app-author-info>
-
-    <h3>Id of selected author: {{ selectedAuthor.id }}</h3>
-    <h3>Full name of selected author: {{ selectedAuthor.firstName }} {{ selectedAuthor.lastName }}</h3>
 </div>
-
-<ng-template #isExistAuthor>
-    <p>Bạn xóa hết authors luôn rồi còn đâu!</p>
-</ng-template>

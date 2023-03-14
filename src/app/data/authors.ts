@@ -7,7 +7,7 @@ export interface Author {
     ipAddress: string;
 }
 
-export const authors = [{
+export const authors: Author[] = [{
     "id": 1,
     "firstName": "Fania",
     "lastName": "Teal",

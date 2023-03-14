@@ -8,6 +8,18 @@ import { Author } from '../data/authors';
   styleUrls: ['./authors.component.scss']
 })
 export class AuthorsComponent {
+
+  displayedColumns: string[] = [
+    'id', 
+    'firstName', 
+    'lastName', 
+    'fullName', 
+    'email', 
+    'gender', 
+    'ipAddress',
+    'select',
+    'delete'
+  ];
   authors = authors;
   selectedAuthor = authors[0];
 
@@ -26,10 +38,6 @@ export class AuthorsComponent {
     }
   } 
 
-  onCount(id: any) {
-
-  }
-
   constructor() {}
-  ngOnInit() {}
+
 }
