@@ -2,7 +2,8 @@
 // src/sass/styles.scss
 
 // @import
-@import "./_mixin";
+@use "./sass/mixins";
+@use "./sass/variables";
 
 
 body {
