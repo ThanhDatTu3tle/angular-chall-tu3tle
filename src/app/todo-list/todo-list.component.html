@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <h2>Todo App</h2>
+
+    <div class="input-task">
+        <form #frm1="ngForm">
+            <input name="todo_task" ngModel type="text" class="form-control" placeholder="What needs to be done?">
+        </form>
+        
+        <button>Add</button>
+    </div>
+
+    <section>
+        <p> Value : {{frm1.value|json}} </p>	
+        <p> Username : {{frm1.value.todo_task}} </p>
+    </section>
+
+    <div class="footer">
+        <div class="statistical">
+            You have ... pending tasks
+        </div>
+        <button>Clear all</button>
+    </div>    
+</div>

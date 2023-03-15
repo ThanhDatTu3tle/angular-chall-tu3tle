@@ -44,7 +44,8 @@ img {
   margin: auto;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: -200px;
+  margin-bottom: -100px;
+  @include center;
   @include border-radius(10px);
 }
   

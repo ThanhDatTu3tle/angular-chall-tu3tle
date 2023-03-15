@@ -1,0 +1,63 @@
+@import "../../styles.scss";
+@import "../../sass/mixins.scss";
+@import "../../sass/variables.scss";
+
+input {
+    width: 80%;
+    height: 50px;
+    padding: 5px 5px 5px 20px;
+    margin: 10px;
+    border: 2px solid;
+    font-size: large;
+    color: $color-dark;
+    @include border-radius(5px);
+}
+
+button {
+    @include border-radius(5px);
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: large;
+    color: $color-primary;
+    background-color: $button-color-primary;
+    border-color: $border-color-primary;
+}
+
+form {
+    width: 80%;
+}
+
+.wrapper {
+    @include center;
+    @include border-radius(10px);
+    width: 100%;
+    padding: 20px;
+    height: fit-content;
+    background-color: $background-color-primary;
+}
+
+.input-task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+    color: $color-dark;
+}

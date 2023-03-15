@@ -19,6 +19,8 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthorsTableComponent } from './authors-table/authors-table.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoItemComponent } from './todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AuthorsTableComponent } from './authors-table/authors-table.component';
     ToggleComponent,
     HeaderComponent,
     FooterComponent,
-    AuthorsTableComponent
+    AuthorsTableComponent,
+    TodoListComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
