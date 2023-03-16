@@ -1,6 +1,10 @@
 <div class="wrapper">
-    
-    <h3>{{ todo.name }}</h3>
+    <div class="task-name">
+        <h2>{{ todo.name }}</h2>
+    </div>
 
-    <button>Delete</button>
+    <div class="btns">
+        <button class="btn-outline" (click)="handleDoneTodo()">Done</button>
+        <button (click)="handleDeleteTodo()">Delete</button>
+    </div>
 </div>

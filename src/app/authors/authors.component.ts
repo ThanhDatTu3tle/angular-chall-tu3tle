@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { authors } from '../data/authors';
-import { Author } from '../data/authors';
+import { authors, Author } from '../data/authors';
 
 @Component({
   selector: 'app-authors',

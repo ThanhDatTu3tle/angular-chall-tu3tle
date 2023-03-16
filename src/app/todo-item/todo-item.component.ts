@@ -20,7 +20,11 @@ export class TodoItemComponent {
     this.add.emit(this.todo);
   }
 
-  handleDeleteAuthor() {
+  handleDoneTodo() {
+    this.delete.emit(this.todo.id);
+  }
+
+  handleDeleteTodo() {
     this.delete.emit(this.todo.id);
   }
 

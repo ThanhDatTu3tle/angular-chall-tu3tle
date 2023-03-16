@@ -1,23 +1,27 @@
 <div class="wrapper">
-    <h2>Todo App</h2>
+    <h1>Todo App</h1>
 
+    <button (click)="onAdd()"></button>
     <div class="input-task">
-        <form #frm1="ngForm">
-            <input name="todo_task" ngModel type="text" class="form-control" placeholder="What needs to be done?">
-        </form>
+
+        <input type="text" [(ngModel)]="todoItem"> 
+
         
-        <button>Add</button>
-    </div>
+<!--         <button (click)="onAdd()">Add</button>
+ -->    </div>
 
     <section>
-        <p> Value : {{frm1.value|json}} </p>	
-        <p> Username : {{frm1.value.todo_task}} </p>
+        <ul>
+            <li *ngFor="let newTodo of newTodos">
+                {{newTodo.name}}
+            </li>
+        </ul>
     </section>
 
     <div class="footer">
         <div class="statistical">
-            You have ... pending tasks
+            You have {{ newTodos.length }} pending tasks
         </div>
-        <button>Clear all</button>
+        <button (click)="onDeletedAll()">Clear all</button>
     </div>    
 </div>
