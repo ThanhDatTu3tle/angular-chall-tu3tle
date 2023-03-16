@@ -11,8 +11,9 @@ export class TodoItemComponent {
   @Output() select = new EventEmitter<Todo>();
   @Output() add = new EventEmitter<Todo>();
   @Output() delete = new EventEmitter<number>();
+  @Output() done = new EventEmitter<boolean>();
 
-  handleShowInfoOfAuthor() {
+  handleSelect() {
     this.select.emit(this.todo);
   }
 
@@ -21,7 +22,7 @@ export class TodoItemComponent {
   }
 
   handleDoneTodo() {
-    this.delete.emit(this.todo.id);
+    this.done.emit(this.todo.id);
   }
 
   handleDeleteTodo() {

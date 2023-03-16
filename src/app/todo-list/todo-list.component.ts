@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { todos, Todo } from '../data/todos';
 
-
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -11,32 +10,39 @@ import { todos, Todo } from '../data/todos';
 export class TodoListComponent {
 
   newTodos = todos;
-
   todoItem: string = '';
-
-  // newTodo: any = {
-  //   id: Math.floor(Math.random() * 1000) + 1,
-  //   name: '',
-  //   status: false
-  // }
+  selectedTodo = this.newTodos[0];
   
   onAdd() {
     let newTodo = {
       id: Math.floor(Math.random() * 1000) + 1,
       name: this.todoItem,
-      status: false
+      status: false,
     }
     this.newTodos = [...this.newTodos, newTodo];
 
     this.todoItem = '';
-    
   }
 
   onDeleted(id: number) {
-    // this.todos = this.todos.filter(todo => {
-    //   return todo.id !== id;
-    // })
+    this.newTodos = this.newTodos.filter(newTodo => {
+      return newTodo.id !== id;
+    })
   } 
+
+  onSelected(selectedTodo: Todo) {
+    this.selectedTodo = selectedTodo;
+    console.log(this.selectedTodo)
+  }
+
+  onDone(status: boolean) {
+    this.newTodos = this.newTodos.map(newTodo => {
+      this.selectedTodo = this.selectedTodo
+      newTodo.status = !newTodo.status;
+      console.log(this.newTodos)
+      return newTodo;
+    })
+  }
 
   onDeletedAll() {
     this.newTodos = [];

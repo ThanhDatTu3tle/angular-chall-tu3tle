@@ -1,21 +1,22 @@
 <div class="wrapper">
     <h1>Todo App</h1>
-
-    <button (click)="onAdd()"></button>
     <div class="input-task">
 
         <input type="text" [(ngModel)]="todoItem"> 
-
         
-<!--         <button (click)="onAdd()">Add</button>
- -->    </div>
+        <button (click)="onAdd()">Add</button>
+    </div>
 
     <section>
-        <ul>
-            <li *ngFor="let newTodo of newTodos">
-                {{newTodo.name}}
-            </li>
-        </ul>
+        <app-todo-item
+            *ngFor="let newTodo of newTodos"
+            [todo]="newTodo" 
+            (select)="onSelected($event)"
+            (delete)="onDeleted($event)"
+            (done)="onDone($event)"
+        >
+
+        </app-todo-item>
     </section>
 
     <div class="footer">
