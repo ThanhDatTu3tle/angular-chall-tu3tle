@@ -1,17 +1,19 @@
 <div class="wrapper">
-    <h1>Todo App</h1>
+    <div class="title">
+        <p>Todo App</p>
+    </div>
+
     <div class="input-task">
 
-        <input type="text" [(ngModel)]="todoItem"> 
+        <input type="text" [(ngModel)]="todoItem" placeholder="Today's tasks"> 
         
-        <button (click)="onAdd()">Add</button>
+        <button (click)="onAdd()">+</button>
     </div>
 
     <section>
         <app-todo-item
             *ngFor="let newTodo of newTodos"
-            [todo]="newTodo" 
-            (select)="onSelected($event)"
+            [newTodo]="newTodo" 
             (delete)="onDeleted($event)"
             (done)="onDone($event)"
         >
@@ -23,6 +25,8 @@
         <div class="statistical">
             You have {{ newTodos.length }} pending tasks
         </div>
-        <button (click)="onDeletedAll()">Clear all</button>
+        <div (click)="onDeletedAll()" class="btn">
+            Clear all
+        </div>
     </div>    
 </div>

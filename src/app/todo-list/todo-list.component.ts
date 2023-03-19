@@ -19,7 +19,10 @@ export class TodoListComponent {
       name: this.todoItem,
       status: false,
     }
-    this.newTodos = [...this.newTodos, newTodo];
+
+    if (this.todoItem !== '') {
+      this.newTodos = [...this.newTodos, newTodo];
+    } 
 
     this.todoItem = '';
   }
@@ -30,18 +33,13 @@ export class TodoListComponent {
     })
   } 
 
-  onSelected(selectedTodo: Todo) {
-    this.selectedTodo = selectedTodo;
-    console.log(this.selectedTodo)
-  }
-
   onDone(status: boolean) {
-    this.newTodos = this.newTodos.map(newTodo => {
-      this.selectedTodo = this.selectedTodo
-      newTodo.status = !newTodo.status;
-      console.log(this.newTodos)
-      return newTodo;
-    })
+    // this.newTodos = this.newTodos.map(newTodo => {
+    //   this.selectedTodo = this.selectedTodo
+    //   newTodo.status = !newTodo.status;
+    //   // console.log(this.newTodos)
+    //   return newTodo;
+    // })
   }
 
   onDeletedAll() {

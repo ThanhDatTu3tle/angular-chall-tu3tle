@@ -7,26 +7,20 @@ import { Todo } from '../data/todos';
   styleUrls: ['./todo-item.component.scss']
 })
 export class TodoItemComponent {
-  @Input() todo: Todo | any;
-  @Output() select = new EventEmitter<Todo>();
-  @Output() add = new EventEmitter<Todo>();
+  @Input() newTodo: Todo | any;
+
   @Output() delete = new EventEmitter<number>();
   @Output() done = new EventEmitter<boolean>();
 
-  handleSelect() {
-    this.select.emit(this.todo);
-  }
+  handleDone() {
+    this.done.emit(this.newTodo.status);
+    this.newTodo.status = !this.newTodo.status;
 
-  handleAddTodo() {
-    this.add.emit(this.todo);
-  }
-
-  handleDoneTodo() {
-    this.done.emit(this.todo.id);
+    console.log(`This.newToDo.status: ${this.newTodo.id}`, this.newTodo.status);
   }
 
   handleDeleteTodo() {
-    this.delete.emit(this.todo.id);
+    this.delete.emit(this.newTodo.id);
   }
 
   constructor() {}

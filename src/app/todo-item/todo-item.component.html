@@ -1,10 +1,22 @@
 <div class="wrapper">
-    <div class="task-name">
-        <h2>{{ todo.name }}</h2>
+    <div class="task-name" *ngIf="newTodo.status === true; else statusFalse"> 
+        <h2>{{ newTodo.name }}</h2>
     </div>
 
     <div class="btns">
-        <button class="btn-outline" (click)="handleSelect()" (click)="handleDoneTodo()">Done</button>
-        <button (click)="handleDeleteTodo()">Delete</button>
+        <button class="btn-outline" (click)="handleDone()">
+            <mat-icon>done_outline</mat-icon>
+        </button>
+        <button (click)="handleDeleteTodo()">
+            <mat-icon>delete_outline</mat-icon>
+        </button>
     </div>
 </div>
+
+<ng-template #statusFalse>
+    <div class="task-name">
+        <del>
+            <h2>{{ newTodo.name }}</h2>
+        </del>
+    </div>
+</ng-template>
