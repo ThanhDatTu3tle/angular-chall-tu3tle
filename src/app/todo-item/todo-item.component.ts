@@ -13,10 +13,7 @@ export class TodoItemComponent {
   @Output() done = new EventEmitter<boolean>();
 
   handleDone() {
-    this.done.emit(this.newTodo.status);
     this.newTodo.status = !this.newTodo.status;
-
-    console.log(`This.newToDo.status: ${this.newTodo.id}`, this.newTodo.status);
   }
 
   handleDeleteTodo() {

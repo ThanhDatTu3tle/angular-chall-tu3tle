@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AuthorsTableComponent } from './authors-table/authors-table.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { ContentProjectionExampleComponent } from './content-projection-example/content-projection-example.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
     FooterComponent,
     AuthorsTableComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    ContentProjectionExampleComponent
   ],
   imports: [
     BrowserModule,

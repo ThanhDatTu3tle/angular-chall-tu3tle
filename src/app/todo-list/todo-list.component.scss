@@ -26,6 +26,7 @@ button {
     color: $color-primary;
     background-color: $background-color-red;
     border-color: $border-color-red;
+    box-shadow: 0 20px 20px 0 rgba($border-color-red, 0.3);
     cursor: pointer;
 
     &:hover {
@@ -106,5 +107,6 @@ form {
     font-weight: 600;
     color: $color-primary;
     background-color: $background-color-red;
+    box-shadow: 0 20px 20px 0 rgba($border-color-red, 0.3);
     cursor: pointer;
 }

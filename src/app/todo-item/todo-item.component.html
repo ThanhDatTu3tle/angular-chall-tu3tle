@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="task-name" *ngIf="newTodo.status === true; else statusFalse"> 
+    <div class="task-name" *ngIf="newTodo.status === false; else statusFalse"> 
         <h2>{{ newTodo.name }}</h2>
     </div>
 

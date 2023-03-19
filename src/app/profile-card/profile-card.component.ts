@@ -31,12 +31,10 @@ export class ProfileCardComponent {
   checked = false;
 
   ngOnInit() {
-    console.log(`ngOnInit: `, this.toggleComponent)
     this.toggleComponents.changes.subscribe(console.log)
   }
 
   ngAfterViewInit() {
-    console.log(`ngAfterViewInit: `, this.toggleComponent)
     this.toggleComponents.changes.subscribe(console.log)
   }
 }

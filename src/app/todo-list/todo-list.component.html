@@ -7,7 +7,9 @@
 
         <input type="text" [(ngModel)]="todoItem" placeholder="Today's tasks"> 
         
-        <button (click)="onAdd()">+</button>
+        <button (click)="onAdd()">
+            <mat-icon>add</mat-icon>
+        </button>
     </div>
 
     <section>
@@ -15,7 +17,6 @@
             *ngFor="let newTodo of newTodos"
             [newTodo]="newTodo" 
             (delete)="onDeleted($event)"
-            (done)="onDone($event)"
         >
 
         </app-todo-item>

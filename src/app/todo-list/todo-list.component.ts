@@ -33,15 +33,6 @@ export class TodoListComponent {
     })
   } 
 
-  onDone(status: boolean) {
-    // this.newTodos = this.newTodos.map(newTodo => {
-    //   this.selectedTodo = this.selectedTodo
-    //   newTodo.status = !newTodo.status;
-    //   // console.log(this.newTodos)
-    //   return newTodo;
-    // })
-  }
-
   onDeletedAll() {
     this.newTodos = [];
   }
