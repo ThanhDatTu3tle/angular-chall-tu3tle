@@ -26,6 +26,10 @@ import { ContentProjectionExampleComponent } from './content-projection-example/
 import { ButtonComponent } from './button/button.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { TabGroupComponent } from './tab-group/tab-group.component';
+import { TabPanelComponent } from './tab-panel/tab-panel.component';
+import { TabBootstrapGroupComponent } from './tab-bootstrap-group/tab-bootstrap-group.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,11 @@ import { NgTemplateComponent } from './ng-template/ng-template.component';
     ContentProjectionExampleComponent,
     ButtonComponent,
     TabsComponent,
-    NgTemplateComponent
+    NgTemplateComponent,
+    DependencyInjectionComponent,
+    TabGroupComponent,
+    TabPanelComponent,
+    TabBootstrapGroupComponent
   ],
   imports: [
     BrowserModule,

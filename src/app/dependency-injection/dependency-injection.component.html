@@ -1,0 +1,45 @@
+<h1>Dependency Injection</h1>
+
+<h2>Basic tab:</h2>
+<app-tab-group [(activeIndex)]="currentIndex">
+    <app-tab-panel title="First tab">
+        First tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Second tab">
+        Second tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Third tab">
+        Third tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Fourth tab">
+        Fourth tab content.
+    </app-tab-panel>
+</app-tab-group>
+<br />
+<br />
+<br />
+<hr>
+<br />
+<br />
+<br />
+<h2>Tab UI after using Dependency Injection:</h2>
+<app-tab-bootstrap-group [(activeIndex)]="currentIndex">
+    <app-tab-panel title="First tab">
+        First tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Second tab">
+        Second tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Third tab">
+        Third tab content.
+    </app-tab-panel>
+
+    <app-tab-panel title="Fourth tab">
+        Fourth tab content.
+    </app-tab-panel>
+</app-tab-bootstrap-group>
