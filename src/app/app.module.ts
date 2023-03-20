@@ -23,6 +23,7 @@ import { AuthorsTableComponent } from './authors-table/authors-table.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ContentProjectionExampleComponent } from './content-projection-example/content-projection-example.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContentProjectionExampleComponent } from './content-projection-example/
     AuthorsTableComponent,
     TodoListComponent,
     TodoItemComponent,
-    ContentProjectionExampleComponent
+    ContentProjectionExampleComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

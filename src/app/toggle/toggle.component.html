@@ -1,4 +1,14 @@
 <div class="wrapper">
+    <header>
+        <ng-content Select="h1"></ng-content>
+        <!-- {{ header }} -->
+    </header>
+
+    <div class="toogle-label">
+        <ng-content select="h2"></ng-content>
+        <!-- {{ question }} -->
+    </div>
+
     <div
         class="toggle-wrapper"
         [class.checked]="checked"
@@ -7,4 +17,11 @@
     >
         <div class="toggle"></div>
     </div>
+
+    <div>
+        <ng-content></ng-content>
+        <!-- {{ content }} -->
+    </div>
+
+    <app-button content="Skip"></app-button>
 </div>

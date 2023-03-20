@@ -20,7 +20,7 @@ export class TodoListComponent {
       status: false,
     }
 
-    if (this.todoItem !== '') {
+    if (this.todoItem !== '' && this.todoItem.indexOf(' ') === -1) {
       this.newTodos = [...this.newTodos, newTodo];
     } 
 

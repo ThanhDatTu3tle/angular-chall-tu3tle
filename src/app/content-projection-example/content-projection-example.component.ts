@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-projection-example.component.scss']
 })
 export class ContentProjectionExampleComponent {
+  checked: boolean = false;
 
+  questions = {
+    question1: false,
+    question2: false,
+    question3: false,
+    question4: false,
+  }
 }

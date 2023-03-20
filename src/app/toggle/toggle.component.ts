@@ -6,8 +6,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./toggle.component.scss']
 })
 export class ToggleComponent {
-  @Input () checked: boolean | undefined = false;
-  @Output () checkedChanged: EventEmitter<boolean> = new EventEmitter;
+  @Input() header?: string;
+  @Input() question?: string;
+  @Input() content?: string;
+
+  @Input() checked: boolean = false;
+  @Output() checkedChanged = new EventEmitter<boolean>();
 
   handleToggle() {
     this.checked = !this.checked;

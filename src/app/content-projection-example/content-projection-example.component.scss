@@ -1,0 +1,20 @@
+header {
+
+}
+
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions {
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}

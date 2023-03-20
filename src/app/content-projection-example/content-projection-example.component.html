@@ -1,5 +1,29 @@
-<h1>Angular and Content Projection Example</h1>
+<div class="wrapper">
+    <header>
+        <h1>Angular and Content Projection Example</h1>
+    </header>
 
-<app-toggle>
+    <div class="questions">
+        <app-toggle [checked]="questions.question1" (checkedChanged)="checked=$event">
+            <h1>Question 1:</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</h2>
+        </app-toggle>
     
-</app-toggle>
+        <app-toggle [checked]="questions.question2" (checkedChanged)="checked=$event">
+            <h1>Question 2:</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</h2>
+        </app-toggle>
+
+        <app-toggle [checked]="questions.question3" (checkedChanged)="checked=$event">
+            <h1>Question 3:</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</h2>
+        </app-toggle>
+    
+        <app-toggle [checked]="questions.question4" (checkedChanged)="checked=$event">
+            <h1>Question 4:</h1>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</h2>
+        </app-toggle>
+    </div>
+
+    <footer></footer>
+</div>
