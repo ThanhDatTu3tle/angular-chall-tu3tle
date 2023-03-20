@@ -24,6 +24,8 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ContentProjectionExampleComponent } from './content-projection-example/content-projection-example.component';
 import { ButtonComponent } from './button/button.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ButtonComponent } from './button/button.component';
     TodoListComponent,
     TodoItemComponent,
     ContentProjectionExampleComponent,
-    ButtonComponent
+    ButtonComponent,
+    TabsComponent,
+    NgTemplateComponent
   ],
   imports: [
     BrowserModule,
