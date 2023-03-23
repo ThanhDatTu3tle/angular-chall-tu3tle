@@ -5,7 +5,7 @@
 
     <div class="input-task">
 
-        <input type="text" [(ngModel)]="todoItem" placeholder="Today's tasks"> 
+        <input #focusInput type="text" [(ngModel)]="todoItem" placeholder="Today's tasks"> 
         
         <button (click)="onAdd()">
             <mat-icon>add</mat-icon>

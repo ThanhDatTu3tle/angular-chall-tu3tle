@@ -1,6 +1,6 @@
 <h1>Dependency Injection</h1>
 
-<h2>Basic tab:</h2>
+<!-- <h2>Basic tab:</h2>
 <app-tab-group [(activeIndex)]="currentIndex">
     <app-tab-panel title="First tab">
         First tab content.
@@ -20,26 +20,30 @@
 </app-tab-group>
 <br />
 <br />
-<br />
-<hr>
-<br />
+<hr> -->
 <br />
 <br />
-<h2>Tab UI after using Dependency Injection:</h2>
+<!-- <h2>Tab UI after using Dependency Injection:</h2> -->
 <app-tab-bootstrap-group [(activeIndex)]="currentIndex">
     <app-tab-panel title="First tab">
-        First tab content.
+        <ng-template appTabPanel>
+            First tab content.
+            <app-counter></app-counter> 
+        </ng-template>
     </app-tab-panel>
 
     <app-tab-panel title="Second tab">
         Second tab content.
+        <app-counter></app-counter>
     </app-tab-panel>
 
     <app-tab-panel title="Third tab">
         Third tab content.
+        <app-counter></app-counter>
     </app-tab-panel>
 
     <app-tab-panel title="Fourth tab">
         Fourth tab content.
+        <app-counter></app-counter>
     </app-tab-panel>
 </app-tab-bootstrap-group>

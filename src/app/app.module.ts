@@ -30,6 +30,8 @@ import { DependencyInjectionComponent } from './dependency-injection/dependency-
 import { TabGroupComponent } from './tab-group/tab-group.component';
 import { TabPanelComponent } from './tab-panel/tab-panel.component';
 import { TabBootstrapGroupComponent } from './tab-bootstrap-group/tab-bootstrap-group.component';
+import { CounterComponent } from './counter/counter.component';
+import { TabPanelDirective } from './tab-panel.directive';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { TabBootstrapGroupComponent } from './tab-bootstrap-group/tab-bootstrap-
     DependencyInjectionComponent,
     TabGroupComponent,
     TabPanelComponent,
-    TabBootstrapGroupComponent
+    TabBootstrapGroupComponent,
+    CounterComponent,
+    TabPanelDirective
   ],
   imports: [
     BrowserModule,

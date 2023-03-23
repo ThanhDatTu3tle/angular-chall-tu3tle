@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { todos, Todo } from '../data/todos';
 
 @Component({
@@ -9,9 +9,15 @@ import { todos, Todo } from '../data/todos';
 
 export class TodoListComponent {
 
+  @ViewChild('focusInput') focusInput?: ElementRef<HTMLElement>;
+
   newTodos = todos;
   todoItem: string = '';
   selectedTodo = this.newTodos[0];
+
+  ngOnInit(): void {
+    this.focusInput?.nativeElement.focus();
+  };
   
   onAdd() {
     let newTodo = {
@@ -25,6 +31,7 @@ export class TodoListComponent {
     } 
 
     this.todoItem = '';
+    this.focusInput?.nativeElement.focus();
   }
 
   onDeleted(id: number) {
